@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HighSight Contact Card – Preview</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #333;
+            text-align: center;
+        }
+
+        .card-container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 360px;
+            border-radius: 12px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .button-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .btn-block {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-block h4 {
+            margin: 10px 0 4px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .btn-block p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .btn-icon {
+            font-size: 2.4rem;
+            color: #6B635A;
+        }
+
+        .qr-button {
+            margin-top: 24px;
+            padding: 12px 20px;
+            background: #6B635A;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .qr-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .qr-modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .qr-popup-img {
+            max-width: 240px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-container">
+
+        <!-- Placeholder preview image -->
+        <img src="https://via.placeholder.com/360x360.png?text=Your+Logo+%2B+Headshot" class="hero-img">
+
+        <div class="button-grid">
+
+            <div class="btn-block">
+                <div class="btn-icon">📇</div>
+                <h4>Save Contact</h4>
+                <p>&nbsp;</p>
+            </div>
+
+            <div class="btn-block">
+                <div class="btn-icon">🌐</div>
+                <h4>Website</h4>
+                <p>highsightstudio.com</p>
+            </div>
+
+            <div class="btn-block">
+                <div class="btn-icon">✉️</div>
+                <h4>Email</h4>
+                <p>tom.scott@highsightstudio.com</p>
+            </div>
+
+            <div class="btn-block">
+                <div class="btn-icon">📱</div>
+                <h4>Text</h4>
+                <p>+1 (662) 242‑1191</p>
+            </div>
+
+        </div>
+
+        <button id="qrButton" class="qr-button">Show QR Code</button>
+
+    </div>
+
+    <div id="qrModal" class="qr-modal">
+        <div class="qr-modal-content">
+            <img src="https://via.placeholder.com/240.png?text=QR+Code" class="qr-popup-img">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('qrButton').onclick = function() {
+            document.getElementById('qrModal').style.display = 'flex';
+        };
+
+        document.getElementById('qrModal').onclick = function() {
+            this.style.display = 'none';
+        };
+    </script>
+
+</body>
+</html>
