@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Scott;Tom;;;
+FN:Tom Scott
+ORG:HighSight Studio
+TITLE:Owner & Content Creator
+TEL;TYPE=CELL,VOICE:+16622421191
+EMAIL;TYPE=WORK,INTERNET:tom.scott@highsightstudio.com
+URL;TYPE=WORK:https://www.highsightstudio.com
+ADR;TYPE=WORK:;;Birmingham;AL;35242;US
+REV:20260810T214550Z
+END:VCARD
