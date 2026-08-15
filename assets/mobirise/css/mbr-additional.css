@@ -831,3 +831,8 @@ a {
 .cid-vsfsnCJjam .mbr-text {
   color: #6b635a;
 }
+.qr-img {
+  max-width: 120px;
+  margin: 20px auto;
+  display: block;
+}
