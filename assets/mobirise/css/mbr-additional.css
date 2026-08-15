@@ -836,3 +836,81 @@ a {
   margin: 20px auto;
   display: block;
 }
+/* ============================================================
+   GLOBAL QR IMAGE SIZE
+   ============================================================ */
+.qr-img {
+  max-width: 200px !important;   /* Bigger QR on mobile + desktop */
+  margin-top: 1rem !important;
+  display: block;
+}
+
+
+/* ============================================================
+   MOBILE FIXES (screen width < 992px)
+   ============================================================ */
+@media (max-width: 991px) {
+
+  /* Put QR at the bottom of the block */
+  .cid-vsfzWRZEpK .row {
+    display: flex !important;
+    flex-direction: column !important;   /* Buttons first, QR last */
+    align-items: center !important;
+  }
+
+  /* Two-column buttons on mobile */
+  .cid-vsfzWRZEpK .row .col-12 {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding: 0.25rem !important;         /* Tight spacing */
+  }
+
+  /* Smaller buttons on mobile */
+  .cid-vsfzWRZEpK .btn {
+    font-size: 0.9rem !important;
+    padding: 10px 12px !important;
+  }
+
+  /* Optional: push QR lower if needed */
+  .cid-vsfzWRZEpK .image-wrapper {
+    margin-top: 1rem !important;
+  }
+}
+
+
+/* ============================================================
+   DESKTOP FIXES (screen width ≥ 992px)
+   ============================================================ */
+@media (min-width: 992px) {
+
+  /* Reduce giant Mobirise padding */
+  .cid-vsfzWRZEpK {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* Tighten spacing around QR + portrait */
+  .cid-vsfzWRZEpK .image-wrapper {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Larger QR on desktop */
+  .qr-img {
+    max-width: 240px !important;
+  }
+
+  /* Smaller, tighter buttons on desktop */
+  .cid-vsfzWRZEpK .btn {
+    font-size: 0.9rem !important;
+    padding: 10px 14px !important;
+  }
+
+  /* Keep buttons in two columns on desktop */
+  .cid-vsfzWRZEpK .row .col-12 {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
