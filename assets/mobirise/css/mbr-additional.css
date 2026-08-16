@@ -934,4 +934,13 @@ body {
     line-height: 1.05 !important;
     text-align: center !important;
 }
+/* Reduce space between buttons and QR */
+#image3-7 {
+    padding-top: 0.5rem !important;   /* was ~3rem */
+    margin-top: 0.5rem !important;    /* tighten gap */
+}
+
+.qr-img {
+    margin-top: 10px !important;      /* was 20px */
+}
 
