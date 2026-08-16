@@ -940,6 +940,10 @@ body {
 #contacts1-6 .card-wrapper {
     margin-bottom: 0.3rem !important;
 }
-html, body {
-    border: 10px solid red !important;
+/* Keep email on two clean lines */
+#contacts1-6 .mbr-text.display-4 {
+    white-space: normal !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
 }
+
