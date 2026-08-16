@@ -844,49 +844,24 @@ body {
   flex-direction: column;
 }
 
-/* Portrait first */
-#image3-3 {
-  order: 1;
-}
-
-/* Buttons next */
-#contacts1-5 {
-  order: 2;
-}
-
-#contacts1-6 {
-  order: 3;
-}
-
-/* QR last */
-#image3-7 {
-  order: 4;
-}
+#image3-3 { order: 1; }      /* Portrait */
+#contacts1-5 { order: 2; }   /* Save Contact + Website */
+#contacts1-6 { order: 3; }   /* Email + Text */
+#image3-7 { order: 4; }      /* QR */
 
 
 /* ============================================================
-   PORTRAIT BLOCK (image3-3)
+   PORTRAIT BLOCK
    ============================================================ */
-#image3-3 {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-}
-
 #image3-3 .image-wrapper img {
   max-width: 260px !important;
   margin: 0 auto !important;
-  display: block !important;
 }
 
 
 /* ============================================================
-   QR BLOCK (image3-7)
+   QR BLOCK
    ============================================================ */
-#image3-7 {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
-}
-
 #image3-7 .qr-img {
   max-width: 240px !important;
   margin: 1rem auto !important;
@@ -895,41 +870,16 @@ body {
 
 
 /* ============================================================
-   BUTTON BLOCKS (contacts1-5 and contacts1-6)
+   BUTTON BLOCKS
    ============================================================ */
-
-/* Reduce padding */
-#contacts1-5,
-#contacts1-6 {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
+#contacts1-5 .card,
+#contacts1-6 .card {
+  background: #ede8e4 !important;
+  border-radius: 4px !important;
 }
 
-/* Smaller titles */
-#contacts1-5 .card-title,
-#contacts1-6 .card-title {
-  font-size: 1.2rem !important;
-}
-
-/* Smaller text */
-#contacts1-5 .mbr-text,
-#contacts1-6 .mbr-text {
-  font-size: 0.9rem !important;
-}
-
-/* Smaller icons */
-#contacts1-5 .mbr-iconfont,
-#contacts1-6 .mbr-iconfont {
-  font-size: 2.2rem !important;
-}
-
-
-/* ============================================================
-   MOBILE FIXES (two-column buttons)
-   ============================================================ */
+/* Two-column buttons on mobile */
 @media (max-width: 991px) {
-
-  /* Two-column layout */
   #contacts1-5 .card,
   #contacts1-6 .card {
     width: 50% !important;
@@ -937,30 +887,10 @@ body {
     max-width: 50% !important;
     padding: 0.25rem !important;
   }
-
-  /* Center content */
-  #contacts1-5 .card-box,
-  #contacts1-6 .card-box {
-    padding: 0.5rem !important;
-  }
 }
 
-
-/* ============================================================
-   DESKTOP FIXES (compact layout)
-   ============================================================ */
+/* Two-column buttons on desktop */
 @media (min-width: 992px) {
-
-  /* Compact spacing */
-  #image3-3,
-  #image3-7,
-  #contacts1-5,
-  #contacts1-6 {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-  }
-
-  /* Two-column buttons on desktop */
   #contacts1-5 .card,
   #contacts1-6 .card {
     width: 50% !important;
@@ -968,4 +898,3 @@ body {
     max-width: 50% !important;
   }
 }
-
