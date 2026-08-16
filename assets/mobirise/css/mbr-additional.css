@@ -943,4 +943,16 @@ body {
 .qr-img {
     margin-top: 10px !important;      /* was 20px */
 }
+/* Remove ALL extra space above the QR section */
+#image3-7 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Tighten QR image spacing */
+.qr-img {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+}
 
