@@ -831,6 +831,9 @@ a {
 .cid-vsfsnCJjam .mbr-text {
   color: #6b635a;
 }
+/* ============================================================
+   QR IMAGE — FINAL SIZE + OVERRIDE
+   ============================================================ */
 .qr-img {
     width: 120px !important;
     max-width: 120px !important;
@@ -839,13 +842,12 @@ a {
     display: block !important;
 }
 
-}
 /* ============================================================
-   REORDER SECTIONS (QR at bottom)
+   REORDER SECTIONS (QR stays at bottom)
    ============================================================ */
 body {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #image3-3 { order: 1; }      /* Portrait */
@@ -853,79 +855,59 @@ body {
 #contacts1-6 { order: 3; }   /* Email + Text */
 #image3-7 { order: 4; }      /* QR */
 
-
 /* ============================================================
    PORTRAIT BLOCK
    ============================================================ */
 #image3-3 .image-wrapper img {
-  max-width: 260px !important;
-  margin: 0 auto !important;
+    max-width: 260px !important;
+    margin: 0 auto !important;
 }
-
-
-/* ============================================================
-   QR BLOCK
-   ============================================================ */
-#image3-7 .qr-img {
-  max-width: 240px !important;
-  margin: 1rem auto !important;
-  display: block !important;
-}
-
 
 /* ============================================================
    BUTTON BLOCKS — GLOBAL CARD SHAPE
    ============================================================ */
 #contacts1-5 .card,
 #contacts1-6 .card {
-  background: #ede8e4 !important;
-  border-radius: 4px !important;
+    background: #ede8e4 !important;
+    border-radius: 4px !important;
 }
-
 
 /* ============================================================
    SHRINK BUTTON HEIGHT (more aggressive)
    ============================================================ */
-
-/* Reduce padding inside each card */
 #contacts1-5 .card-wrapper,
 #contacts1-6 .card-wrapper {
-    padding: 0.25rem !important;   /* was 3rem → 0.4rem → now 0.25rem */
+    padding: 0.25rem !important;
 }
 
-/* Reduce icon size */
 #contacts1-5 .mbr-iconfont,
 #contacts1-6 .mbr-iconfont {
-    font-size: 1.4rem !important;   /* was 5rem → 1.8rem → now 1.4rem */
+    font-size: 1.4rem !important;
     margin-bottom: 0.15rem !important;
 }
 
-/* Reduce title size (display-2 override) */
 #contacts1-5 .card-title.display-2,
 #contacts1-6 .card-title.display-2 {
-    font-size: 0.85rem !important;   /* was 3rem → 0.95rem → now 0.85rem */
+    font-size: 0.85rem !important;
     line-height: 1.0 !important;
     margin-bottom: 0.1rem !important;
 }
 
-/* Reduce text size (display-4 override) */
 #contacts1-5 .mbr-text.display-4,
 #contacts1-6 .mbr-text.display-4 {
-    font-size: 0.7rem !important;    /* was 1.1rem → 0.75rem → now 0.7rem */
+    font-size: 0.7rem !important;
     line-height: 1.0 !important;
     margin-bottom: 0.1rem !important;
 }
 
-
 /* ============================================================
-   CENTER GAP BETWEEN BUTTON COLUMNS (stronger)
+   CENTER GAP BETWEEN BUTTON COLUMNS
    ============================================================ */
 #contacts1-5 .card,
 #contacts1-6 .card {
-    width: calc(50% - 0.75rem) !important;   /* increased gap */
-    margin: 0.35rem !important;              /* increased spacing */
+    width: calc(50% - 0.75rem) !important;
+    margin: 0.35rem !important;
 }
-
 
 /* ============================================================
    MATCH BUTTON ROW WIDTH TO HEADER WIDTH
@@ -936,7 +918,6 @@ body {
     margin: 0 auto !important;
 }
 
-
 /* ============================================================
    REDUCE SPACE BETWEEN ROWS
    ============================================================ */
@@ -944,7 +925,10 @@ body {
 #contacts1-6 .card-wrapper {
     margin-bottom: 0.3rem !important;
 }
-/* Keep email on two clean lines */
+
+/* ============================================================
+   EMAIL — KEEP TWO CLEAN LINES
+   ============================================================ */
 #contacts1-6 .mbr-text.display-4 {
     white-space: normal !important;
     line-height: 1.05 !important;
