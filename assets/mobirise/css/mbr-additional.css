@@ -880,46 +880,46 @@ body {
 
 
 /* ============================================================
-   SHRINK BUTTON HEIGHT (~75% smaller)
+   SHRINK BUTTON HEIGHT (more aggressive)
    ============================================================ */
 
 /* Reduce padding inside each card */
 #contacts1-5 .card-wrapper,
 #contacts1-6 .card-wrapper {
-    padding: 0.4rem !important;   /* was 3rem */
+    padding: 0.25rem !important;   /* was 3rem → 0.4rem → now 0.25rem */
 }
 
 /* Reduce icon size */
 #contacts1-5 .mbr-iconfont,
 #contacts1-6 .mbr-iconfont {
-    font-size: 1.8rem !important;   /* was 5rem */
-    margin-bottom: 0.2rem !important;
+    font-size: 1.4rem !important;   /* was 5rem → 1.8rem → now 1.4rem */
+    margin-bottom: 0.15rem !important;
 }
 
 /* Reduce title size (display-2 override) */
 #contacts1-5 .card-title.display-2,
 #contacts1-6 .card-title.display-2 {
-    font-size: 0.95rem !important;
-    line-height: 1.1 !important;
-    margin-bottom: 0.15rem !important;
+    font-size: 0.85rem !important;   /* was 3rem → 0.95rem → now 0.85rem */
+    line-height: 1.0 !important;
+    margin-bottom: 0.1rem !important;
 }
 
 /* Reduce text size (display-4 override) */
 #contacts1-5 .mbr-text.display-4,
 #contacts1-6 .mbr-text.display-4 {
-    font-size: 0.75rem !important;
-    line-height: 1.1 !important;
-    margin-bottom: 0.15rem !important;
+    font-size: 0.7rem !important;    /* was 1.1rem → 0.75rem → now 0.7rem */
+    line-height: 1.0 !important;
+    margin-bottom: 0.1rem !important;
 }
 
 
 /* ============================================================
-   CENTER GAP BETWEEN BUTTON COLUMNS
+   CENTER GAP BETWEEN BUTTON COLUMNS (stronger)
    ============================================================ */
 #contacts1-5 .card,
 #contacts1-6 .card {
-    width: calc(50% - 0.5rem) !important;   /* creates center gap */
-    margin: 0.25rem !important;             /* spacing around cards */
+    width: calc(50% - 0.75rem) !important;   /* increased gap */
+    margin: 0.35rem !important;              /* increased spacing */
 }
 
 
@@ -938,5 +938,5 @@ body {
    ============================================================ */
 #contacts1-5 .card-wrapper,
 #contacts1-6 .card-wrapper {
-    margin-bottom: 0.4rem !important;
+    margin-bottom: 0.3rem !important;
 }
