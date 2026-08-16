@@ -840,47 +840,42 @@ a {
    GLOBAL QR IMAGE SIZE
    ============================================================ */
 .qr-img {
-  max-width: 200px !important;   /* Bigger QR on mobile + desktop */
+  max-width: 200px !important;
   margin-top: 1rem !important;
-  display: block;
+  display: block !important;
 }
 
 
 /* ============================================================
-   MOBILE FIXES (screen width < 992px)
+   MOBILE FIXES
    ============================================================ */
 @media (max-width: 991px) {
 
-  /* Put QR at the bottom of the block */
-  .cid-vsfzWRZEpK .row {
+  /* Put QR at the bottom */
+  .cid-vsfzWRZEpK .row.mbr-row {
     display: flex !important;
-    flex-direction: column !important;   /* Buttons first, QR last */
+    flex-direction: column !important;
     align-items: center !important;
   }
 
   /* Two-column buttons on mobile */
-  .cid-vsfzWRZEpK .row .col-12 {
+  .cid-vsfzWRZEpK .row.mbr-row > .col-12 {
     width: 50% !important;
     flex: 0 0 50% !important;
     max-width: 50% !important;
-    padding: 0.25rem !important;         /* Tight spacing */
+    padding: 0.25rem !important;
   }
 
-  /* Smaller buttons on mobile */
-  .cid-vsfzWRZEpK .btn {
+  /* Smaller buttons */
+  .cid-vsfzWRZEpK .row.mbr-row > .col-12 .btn {
     font-size: 0.9rem !important;
     padding: 10px 12px !important;
-  }
-
-  /* Optional: push QR lower if needed */
-  .cid-vsfzWRZEpK .image-wrapper {
-    margin-top: 1rem !important;
   }
 }
 
 
 /* ============================================================
-   DESKTOP FIXES (screen width ≥ 992px)
+   DESKTOP FIXES
    ============================================================ */
 @media (min-width: 992px) {
 
@@ -901,15 +896,16 @@ a {
     max-width: 240px !important;
   }
 
-  /* Smaller, tighter buttons on desktop */
-  .cid-vsfzWRZEpK .btn {
+  /* Smaller buttons */
+  .cid-vsfzWRZEpK .row.mbr-row > .col-12 .btn {
     font-size: 0.9rem !important;
     padding: 10px 14px !important;
   }
 
-  /* Keep buttons in two columns on desktop */
-  .cid-vsfzWRZEpK .row .col-12 {
+  /* Two-column buttons on desktop */
+  .cid-vsfzWRZEpK .row.mbr-row > .col-12 {
     width: 50% !important;
     flex: 0 0 50% !important;
     max-width: 50% !important;
   }
+}
