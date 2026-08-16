@@ -837,75 +837,135 @@ a {
   display: block;
 }
 /* ============================================================
-   GLOBAL QR IMAGE SIZE
+   REORDER SECTIONS (QR goes at bottom)
    ============================================================ */
-.qr-img {
-  max-width: 200px !important;
-  margin-top: 1rem !important;
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Portrait first */
+#image3-3 {
+  order: 1;
+}
+
+/* Buttons next */
+#contacts1-5 {
+  order: 2;
+}
+
+#contacts1-6 {
+  order: 3;
+}
+
+/* QR last */
+#image3-7 {
+  order: 4;
+}
+
+
+/* ============================================================
+   PORTRAIT BLOCK (image3-3)
+   ============================================================ */
+#image3-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+#image3-3 .image-wrapper img {
+  max-width: 260px !important;
+  margin: 0 auto !important;
   display: block !important;
 }
 
 
 /* ============================================================
-   MOBILE FIXES
+   QR BLOCK (image3-7)
+   ============================================================ */
+#image3-7 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+#image3-7 .qr-img {
+  max-width: 240px !important;
+  margin: 1rem auto !important;
+  display: block !important;
+}
+
+
+/* ============================================================
+   BUTTON BLOCKS (contacts1-5 and contacts1-6)
+   ============================================================ */
+
+/* Reduce padding */
+#contacts1-5,
+#contacts1-6 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Smaller titles */
+#contacts1-5 .card-title,
+#contacts1-6 .card-title {
+  font-size: 1.2rem !important;
+}
+
+/* Smaller text */
+#contacts1-5 .mbr-text,
+#contacts1-6 .mbr-text {
+  font-size: 0.9rem !important;
+}
+
+/* Smaller icons */
+#contacts1-5 .mbr-iconfont,
+#contacts1-6 .mbr-iconfont {
+  font-size: 2.2rem !important;
+}
+
+
+/* ============================================================
+   MOBILE FIXES (two-column buttons)
    ============================================================ */
 @media (max-width: 991px) {
 
-  /* Put QR at the bottom */
-  .cid-vsfzWRZEpK .row.mbr-row {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-
-  /* Two-column buttons on mobile */
-  .cid-vsfzWRZEpK .row.mbr-row > .col-12 {
+  /* Two-column layout */
+  #contacts1-5 .card,
+  #contacts1-6 .card {
     width: 50% !important;
     flex: 0 0 50% !important;
     max-width: 50% !important;
     padding: 0.25rem !important;
   }
 
-  /* Smaller buttons */
-  .cid-vsfzWRZEpK .row.mbr-row > .col-12 .btn {
-    font-size: 0.9rem !important;
-    padding: 10px 12px !important;
+  /* Center content */
+  #contacts1-5 .card-box,
+  #contacts1-6 .card-box {
+    padding: 0.5rem !important;
   }
 }
 
 
 /* ============================================================
-   DESKTOP FIXES
+   DESKTOP FIXES (compact layout)
    ============================================================ */
 @media (min-width: 992px) {
 
-  /* Reduce giant Mobirise padding */
-  .cid-vsfzWRZEpK {
+  /* Compact spacing */
+  #image3-3,
+  #image3-7,
+  #contacts1-5,
+  #contacts1-6 {
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
   }
 
-  /* Tighten spacing around QR + portrait */
-  .cid-vsfzWRZEpK .image-wrapper {
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
-  }
-
-  /* Larger QR on desktop */
-  .qr-img {
-    max-width: 240px !important;
-  }
-
-  /* Smaller buttons */
-  .cid-vsfzWRZEpK .row.mbr-row > .col-12 .btn {
-    font-size: 0.9rem !important;
-    padding: 10px 14px !important;
-  }
-
   /* Two-column buttons on desktop */
-  .cid-vsfzWRZEpK .row.mbr-row > .col-12 {
+  #contacts1-5 .card,
+  #contacts1-6 .card {
     width: 50% !important;
     flex: 0 0 50% !important;
     max-width: 50% !important;
   }
 }
+
