@@ -832,9 +832,13 @@ a {
   color: #6b635a;
 }
 .qr-img {
-  max-width: 120px;
-  margin: 20px auto;
-  display: block;
+    width: 120px !important;
+    max-width: 120px !important;
+    height: auto !important;
+    margin: 20px auto !important;
+    display: block !important;
+}
+
 }
 /* ============================================================
    REORDER SECTIONS (QR at bottom)
